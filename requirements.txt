@@ -1,4 +1,5 @@
 mlflow-skinny
 psycopg2-binary
+sqlalchemy
 flask
 gunicorn
