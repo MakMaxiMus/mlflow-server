@@ -12,7 +12,8 @@ cmd = [
     "--backend-store-uri", db_url,
     "--default-artifact-root", "./mlartifacts",
     "--host", "0.0.0.0",
-    "--port", port
+    "--port", port,
+    "--workers", "1"
 ]
 
 subprocess.run(cmd)
