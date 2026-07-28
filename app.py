@@ -13,8 +13,7 @@ cmd = [
     "--default-artifact-root", "./mlartifacts",
     "--host", "0.0.0.0",
     "--port", port,
-    "--workers", "1",
-    "--uvicorn-opts", "--loop uvloop --http h11 --workers 1"
+    "--workers", "1"
 ]
 
 subprocess.run(cmd)
