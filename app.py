@@ -7,14 +7,14 @@ if not db_url:
 
 port = os.environ.get("PORT", "10000")
 
-# Запускаем через waitress — он ест всего ~100MB RAM!
 cmd = [
     "mlflow", "server",
     "--backend-store-uri", db_url,
     "--default-artifact-root", "./mlartifacts",
     "--host", "0.0.0.0",
     "--port", port,
-    "--gunicorn-opts", "--threads 1 --workers 1"
+    "--workers", "1",
+    "--uvicorn-opts", "--loop uvloop --http h11 --workers 1"
 ]
 
 subprocess.run(cmd)
