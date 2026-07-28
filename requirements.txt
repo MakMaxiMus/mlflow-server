@@ -1,3 +1,4 @@
 mlflow-skinny
 psycopg2-binary
-uvicorn
+flask
+gunicorn
