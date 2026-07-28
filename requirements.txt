@@ -3,4 +3,5 @@ psycopg2-binary
 sqlalchemy
 alembic
 flask
+flask-cors
 gunicorn
