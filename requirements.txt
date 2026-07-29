@@ -5,4 +5,6 @@ alembic
 flask
 flask-cors
 aiohttp
+pandas
+huey
 gunicorn
