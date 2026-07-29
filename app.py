@@ -1,8 +1,10 @@
-
 import os
 import subprocess
 
 db_url = os.environ.get("DB_URL")
+if not db_url:
+    raise ValueError("DB_URL secret is not set!")
+
 port = os.environ.get("PORT", "10000")
 
 cmd = [
