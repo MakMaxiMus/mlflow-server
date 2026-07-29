@@ -17,6 +17,7 @@ cmd = [
     "mlflow", "server",
     "--backend-store-uri", db_url,
     "--default-artifact-root", "./mlartifacts",
+    # "--serve-artifacts",  # <-- This flag enables HTTP endpoints for downloading artifacts!
     "--host", "0.0.0.0",
     "--port", port
 ]
