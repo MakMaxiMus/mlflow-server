@@ -7,6 +7,12 @@ if not db_url:
 
 port = os.environ.get("PORT", "10000")
 
+# 1. Автоматически приводим схему базы Neon в соответствие
+print("Upgrading database schema...")
+subprocess.run(["mlflow", "db", "upgrade", db_url], check=True)
+
+# 2. Запускаем сервер MLflow
+print("Starting MLflow server...")
 cmd = [
     "mlflow", "server",
     "--backend-store-uri", db_url,
