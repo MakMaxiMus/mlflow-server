@@ -4,6 +4,5 @@ sqlalchemy
 alembic
 flask
 flask-cors
+aiohttp
 gunicorn
-pandas
-huey
